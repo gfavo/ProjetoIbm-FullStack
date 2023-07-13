@@ -1,0 +1,14 @@
+<h3>Input:  </h3>
+<h4>Id: </h4> <input type="text" [(ngModel)]="id">
+<h4>Nome: </h4> <input type="text" [(ngModel)]="nome">
+<br>
+<input type="button" value="Iniciar processo" (click)="iniciarProcesso()">
+<input type="button" value="Marcar Entrevista" (click)="marcarEntrevista()">
+<input type="button" value="Aprovar" (click)="aprovarCandidato()">
+<input type="button" value="Desqualificar" (click)="desqualificarCandidato()">
+<input type="button" value="Status do Candidato" (click)="statusCandidato()">
+<input type="button" value="Listar os Aprovados" (click)="listarAprovados()">
+
+<h3>Output:  </h3>
+
+<textarea name="" id="" cols="40" rows="10" [(ngModel)]="output"></textarea>

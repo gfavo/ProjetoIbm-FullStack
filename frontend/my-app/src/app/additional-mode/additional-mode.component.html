@@ -1,0 +1,36 @@
+<div class="div">
+    <input type="button" value="Iniciar processo" (click)="iniciarProcesso()">
+    <input type="button" value="Listar aprovados" (click)="listarAprovados()">
+           <h1></h1>
+           <input type="text" [(ngModel)]="nome" > Nome atual: {{nome}}
+         <div>Candidatos: </div>
+         
+         <table>
+            <tr>
+                <th>
+                    nome
+                </th>
+                <th>
+                    id
+                </th>
+                <th>
+                    status
+                </th>
+            </tr>
+            <tr *ngFor="let candidato of candidatos">
+                <td>{{candidato.nome}}</td>
+                <td>{{candidato.codCandidato}}</td>
+                <td>{{candidato.status}}</td>
+                <td><button *ngIf="!aprovado(candidato.status)" (click)="acaoCandidato(candidato.status, candidato.codCandidato)">{{getAcaoCandidato(candidato.status)}}</button><button (click)="desqualificarCandidato(candidato.codCandidato)">Desqualificar</button>
+            </tr>
+        </table>
+
+        <div *ngIf="aprovadosExsitem()">
+            <h2>
+                Aprovados
+            </h2>
+            <ul>
+                <li *ngFor="let aprovado of aprovados">{{aprovado}}</li>
+            </ul>
+        </div>
+</div>

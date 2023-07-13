@@ -1,0 +1,6 @@
+<ul>
+    <li *ngIf="isLegacy()" routerLink="/" class="current-url"><a>Modo Normal </a></li>
+    <li *ngIf="isAdditional()" routerLink="/"><a>Modo Normal </a></li>
+    <li *ngIf="isLegacy()" routerLink="/additional"><a>Modo Atualizado</a></li>
+    <li *ngIf="isAdditional()" routerLink="/additional" class="current-url"><a>Modo Atualizado</a></li>
+  </ul>
